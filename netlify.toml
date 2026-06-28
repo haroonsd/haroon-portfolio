@@ -1,5 +1,5 @@
 [build]
-  command = "npm install -g pnpm@10.4.1 && pnpm install --frozen-lockfile && pnpm run build:client"
+  command = "pnpm install --frozen-lockfile && pnpm run build:client"
   publish = "dist/public"
 
 [build.environment]
