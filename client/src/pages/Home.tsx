@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
 import Work from "@/components/Work";
 import Skills from "@/components/Skills";
+import TechStack from "@/components/TechStack";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import CursorDot from "@/components/CursorDot";
@@ -16,6 +17,7 @@ export default function Home() {
       <Brands />
       <Work />
       <Skills />
+      <TechStack />
       <About />
       <Contact />
     </div>

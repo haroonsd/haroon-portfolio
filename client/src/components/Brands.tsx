@@ -1,6 +1,15 @@
 import Reveal from "@/components/Reveal";
 
-const brands = ["Rogers", "Chatr", "Wireless DNA", "Skymet", "Gramcover", "Tech Mahindra", "HCC Beverages", "Designbox"];
+const brands = [
+  { name: "Rogers", logo: "https://logo.clearbit.com/rogers.com" },
+  { name: "Chatr", logo: "https://logo.clearbit.com/chatrwireless.com" },
+  { name: "Wireless DNA", logo: "https://logo.clearbit.com/wirelessdna.ca" },
+  { name: "Skymet", logo: "https://logo.clearbit.com/skymetweather.com" },
+  { name: "Gramcover", logo: "https://logo.clearbit.com/gramcover.com" },
+  { name: "Tech Mahindra", logo: "https://logo.clearbit.com/techmahindra.com" },
+  { name: "HCC Beverages", logo: "https://logo.clearbit.com/hccbeverages.com" },
+  { name: "Designbox", logo: "https://logo.clearbit.com/designbox.ca" },
+];
 
 function BrandRow({ direction }: { direction: "left" | "right" }) {
   const list = direction === "left" ? brands : [...brands].reverse();
@@ -10,10 +19,16 @@ function BrandRow({ direction }: { direction: "left" | "right" }) {
         <div key={rep} className="flex gap-3.5 shrink-0 mr-3.5">
           {list.map((brand) => (
             <div
-              key={`${rep}-${brand}`}
-              className="w-[130px] h-10 border border-[#1e1e1e] flex items-center justify-center font-['Syne_Mono'] text-[10px] text-[#6b6b6b] shrink-0 tracking-wider"
+              key={`${rep}-${brand.name}`}
+              className="w-[150px] h-[68px] border border-[#1e1e1e] bg-[#0d0d0d] flex flex-col items-center justify-center gap-1.5 px-3 shrink-0"
             >
-              {brand}
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className="h-7 w-auto max-w-[110px] object-contain"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+              />
+              <span className="font-['Syne_Mono'] text-[9px] text-[#6b6b6b] tracking-wider whitespace-nowrap">{brand.name}</span>
             </div>
           ))}
         </div>

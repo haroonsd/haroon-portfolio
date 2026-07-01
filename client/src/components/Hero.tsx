@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
 
-const PROFILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663392511065/AnQU8RMRgSGMUz5FaD6EEA/haroon-profile_082fac25.jpg";
-const TAGLINE = "I build the systems behind the marketing.";
+const HERO_VIDEO = "https://res.cloudinary.com/dchbuwhfz/video/upload/v1782940613/A_day_in_the_life_of_a_marketing_coordinator_in_Canada_Follow_for_more_toronto_worklifeba_lmvlcw.mp4";
+const TAGLINE = "I build ai-powered marketing systems to automate business growth.";
 
 const stats = [
   { value: "5+", label: "Years" },
@@ -88,11 +88,18 @@ export default function Hero() {
             </Reveal>
           </div>
 
-          {/* Right: photo */}
+          {/* Right: video */}
           <div className="flex-1 relative w-full">
             <div className="absolute -inset-20 pointer-events-none z-0" style={{ background: "radial-gradient(ellipse at center, rgba(232,160,48,0.055) 0%, transparent 65%)" }} />
             <div className="relative z-10 w-full aspect-[4/5] bg-[#111111] border border-[#1e1e1e] overflow-hidden">
-              <img src={PROFILE_IMG} alt="Haroon Siddiqui" className="w-full h-full object-cover" style={{ objectPosition: "50% 10%" }} />
+              <video
+                src={HERO_VIDEO}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
