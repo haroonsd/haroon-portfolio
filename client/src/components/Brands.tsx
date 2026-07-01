@@ -1,15 +1,42 @@
+import { useState } from "react";
 import Reveal from "@/components/Reveal";
 
 const brands = [
   { name: "Rogers", logo: "https://logo.clearbit.com/rogers.com" },
-  { name: "Chatr", logo: "https://logo.clearbit.com/chatrwireless.com" },
+  { name: "Chatr", logo: "https://logo.clearbit.com/chatr.ca" },
   { name: "Wireless DNA", logo: "https://logo.clearbit.com/wirelessdna.ca" },
   { name: "Skymet", logo: "https://logo.clearbit.com/skymetweather.com" },
   { name: "Gramcover", logo: "https://logo.clearbit.com/gramcover.com" },
   { name: "Tech Mahindra", logo: "https://logo.clearbit.com/techmahindra.com" },
   { name: "HCC Beverages", logo: "https://logo.clearbit.com/hccbeverages.com" },
-  { name: "Designbox", logo: "https://logo.clearbit.com/designbox.ca" },
+  { name: "Designbox", logo: "https://logo.clearbit.com/designboxcreative.com" },
 ];
+
+function BrandCard({ brand }: { brand: { name: string; logo: string } }) {
+  const [err, setErr] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className="w-[150px] h-[68px] border border-[#1e1e1e] bg-[#0d0d0d] flex flex-col items-center justify-center gap-1.5 px-3 shrink-0">
+      {!err ? (
+        <>
+          <img
+            src={brand.logo}
+            alt={brand.name}
+            className={`h-7 w-auto max-w-[110px] object-contain transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0 h-0"}`}
+            onLoad={() => setLoaded(true)}
+            onError={() => setErr(true)}
+          />
+          <span className={`font-['Syne_Mono'] text-[9px] text-[#6b6b6b] tracking-wider whitespace-nowrap ${!loaded ? "font-['Syne'] text-[12px] text-[#f0ede8] font-bold tracking-normal" : ""}`}>
+            {brand.name}
+          </span>
+        </>
+      ) : (
+        <span className="font-['Syne'] font-bold text-[13px] text-[#f0ede8] text-center leading-tight px-1">{brand.name}</span>
+      )}
+    </div>
+  );
+}
 
 function BrandRow({ direction }: { direction: "left" | "right" }) {
   const list = direction === "left" ? brands : [...brands].reverse();
@@ -18,18 +45,7 @@ function BrandRow({ direction }: { direction: "left" | "right" }) {
       {[0, 1].map((rep) => (
         <div key={rep} className="flex gap-3.5 shrink-0 mr-3.5">
           {list.map((brand) => (
-            <div
-              key={`${rep}-${brand.name}`}
-              className="w-[150px] h-[68px] border border-[#1e1e1e] bg-[#0d0d0d] flex flex-col items-center justify-center gap-1.5 px-3 shrink-0"
-            >
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                className="h-7 w-auto max-w-[110px] object-contain"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
-              />
-              <span className="font-['Syne_Mono'] text-[9px] text-[#6b6b6b] tracking-wider whitespace-nowrap">{brand.name}</span>
-            </div>
+            <BrandCard key={`${rep}-${brand.name}`} brand={brand} />
           ))}
         </div>
       ))}

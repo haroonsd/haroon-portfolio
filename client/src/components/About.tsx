@@ -1,6 +1,6 @@
 import Reveal from "@/components/Reveal";
 
-const PROFILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663392511065/AnQU8RMRgSGMUz5FaD6EEA/haroon-profile_082fac25.jpg";
+const PROFILE_IMG = "https://res.cloudinary.com/dchbuwhfz/image/upload/v1782945695/WhatsApp_Image_2026-07-01_at_6.40.18_PM_qwcnse.jpg";
 
 const aboutStats = [
   { value: "India → Canada", label: "Journey" },
