@@ -5,20 +5,29 @@ import Reveal from "@/components/Reveal";
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
     setSubmitting(true);
-    console.log("Portfolio contact form submission:", {
-      name: data.get("name"),
-      email: data.get("email"),
-      message: data.get("message"),
-    });
-    setTimeout(() => {
-      setSubmitting(false);
+    try {
+      const formData = new FormData(form);
+      const body = new URLSearchParams();
+      formData.forEach((value, key) => body.append(key, value.toString()));
+
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (!res.ok) throw new Error("Network error");
       toast.success("Message sent — I'll get back to you soon.");
-      e.currentTarget.reset();
-    }, 600);
+      form.reset();
+    } catch {
+      toast.error("Something went wrong. Email me at hsiddiqui.ind@gmail.com");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -41,7 +50,19 @@ export default function Contact() {
           </Reveal>
         </div>
 
-        <Reveal as="form" onSubmit={handleSubmit} className="max-w-[600px] mx-auto" delay={100}>
+        <Reveal
+          as="form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          className="max-w-[600px] mx-auto"
+          delay={100}
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="bot-field" style={{ display: "none" }} aria-hidden="true" />
+
           <div className="mb-7">
             <label className="block font-['Syne_Mono'] text-[11px] uppercase tracking-[2px] text-[#6b6b6b] mb-2.5">Your Name</label>
             <input type="text" name="name" className="form-input" required />
