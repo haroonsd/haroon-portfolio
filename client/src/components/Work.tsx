@@ -56,13 +56,6 @@ const miniProjects = [
   },
 ];
 
-const socialPlaceholders = [
-  { label: "Event Recap — National Home Show", tag: "EVENTS" },
-  { label: "Behind the Booth", tag: "BEHIND THE BRAND" },
-  { label: "A Day in Marketing Ops", tag: "DAY IN THE LIFE" },
-  { label: "Retail Marketing Tips", tag: "ORGANIC CONTENT" },
-];
-
 export default function Work() {
   return (
     <section id="work" data-nav="work" className="py-24 md:py-[120px] border-b border-[#1e1e1e]">
@@ -114,34 +107,6 @@ export default function Work() {
                 <div className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8a030] mb-4">{m.tag}</div>
                 <h4 className="font-['Syne'] font-bold text-[22px] text-[#f0ede8] mb-3.5 tracking-[-0.5px]">{m.title}</h4>
                 <p className="font-['Inter'] text-[15px] text-[#6b6b6b] leading-[1.65]">{m.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-
-        {/* Social media videos */}
-        <div className="border-t border-[#1e1e1e] mt-14 pt-14">
-          <Reveal label className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#6b6b6b] mb-3">
-            SOCIAL CONTENT
-          </Reveal>
-          <Reveal as="h3" className="font-['Syne'] font-bold text-[26px] md:text-[34px] tracking-[-1px] text-[#f0ede8] leading-[1.1] mb-10">
-            Content that <span className="text-[#e8a030]">moves</span>.
-          </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {socialPlaceholders.map((v, i) => (
-              <Reveal key={v.label} delay={i * 60} className="group relative border border-[#1e1e1e] bg-[#0d0d0d] overflow-hidden" style={{ aspectRatio: "9/16" }}>
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-4">
-                  <div className="w-12 h-12 border border-[#e8a030]/40 flex items-center justify-center group-hover:border-[#e8a030] transition-colors duration-300">
-                    <span className="text-[#e8a030] text-xl ml-0.5">▶</span>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-['Syne_Mono'] text-[9px] tracking-[2px] uppercase text-[#e8a030] mb-1.5">{v.tag}</div>
-                    <div className="font-['Inter'] text-[11px] text-[#6b6b6b] leading-[1.5]">{v.label}</div>
-                  </div>
-                </div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <div className="font-['Syne_Mono'] text-[9px] text-[#2a2a2a] tracking-[1px] uppercase">Video coming soon</div>
-                </div>
               </Reveal>
             ))}
           </div>
