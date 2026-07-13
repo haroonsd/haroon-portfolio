@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
 import Work from "@/components/Work";
+import Websites from "@/components/Websites";
 import SocialVideos from "@/components/SocialVideos";
 import Skills from "@/components/Skills";
 import TechStack from "@/components/TechStack";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Brands />
       <Work />
+      <Websites />
       <SocialVideos />
       <Skills />
       <TechStack />
