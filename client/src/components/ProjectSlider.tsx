@@ -37,17 +37,17 @@ export default function ProjectSlider({ images }: Props) {
         <>
           <button
             onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0a0a0a]/75 border border-[#2a2a2a] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 hover:border-[#e8a030] hover:text-[#e8a030]"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#f4f1ea]/85 border border-[#d0cab8] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 hover:border-[#e8490f]"
             aria-label="Previous"
           >
-            <span className="text-[#f0ede8] text-base leading-none">←</span>
+            <span className="text-[#17140e] text-base leading-none">←</span>
           </button>
           <button
             onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0a0a0a]/75 border border-[#2a2a2a] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 hover:border-[#e8a030] hover:text-[#e8a030]"
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#f4f1ea]/85 border border-[#d0cab8] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 hover:border-[#e8490f]"
             aria-label="Next"
           >
-            <span className="text-[#f0ede8] text-base leading-none">→</span>
+            <span className="text-[#17140e] text-base leading-none">→</span>
           </button>
         </>
       )}
@@ -59,7 +59,7 @@ export default function ProjectSlider({ images }: Props) {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-1 rounded-full transition-all duration-300 ${i === current ? "w-5 bg-[#e8a030]" : "w-1.5 bg-[#6b6b6b]"}`}
+              className={`h-1 rounded-full transition-all duration-300 ${i === current ? "w-5 bg-[#e8490f]" : "w-1.5 bg-[#f4f1ea]/70"}`}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}
@@ -69,7 +69,7 @@ export default function ProjectSlider({ images }: Props) {
       {/* Pause indicator */}
       {paused && images.length > 1 && (
         <div className="absolute top-3 right-3 z-10">
-          <span className="font-['Syne_Mono'] text-[9px] tracking-[1.5px] uppercase text-[#6b6b6b] bg-[#0a0a0a]/70 px-2 py-1">PAUSED</span>
+          <span className="font-['IBM_Plex_Mono'] text-[9px] tracking-[1.5px] uppercase text-[#8a8278] bg-[#f4f1ea]/85 px-2 py-1">PAUSED</span>
         </div>
       )}
     </div>

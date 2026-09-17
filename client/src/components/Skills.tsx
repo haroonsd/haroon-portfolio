@@ -35,24 +35,27 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" data-nav="skills" className="py-24 md:py-[120px] border-b border-[#1e1e1e]">
+    <section id="skills" data-nav="skills" className="py-24 md:py-[120px] border-b border-[#d0cab8]">
       <div className="container max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="mb-18">
-          <Reveal label className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8a030] mb-6">
+          <Reveal label className="font-['IBM_Plex_Mono'] text-[10px] tracking-[2.5px] uppercase text-[#8a8278] mb-2">
+            // 04
+          </Reveal>
+          <Reveal label className="font-['IBM_Plex_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8490f] mb-6">
             WHAT I BRING
           </Reveal>
-          <Reveal as="h2" className="font-['Syne'] font-bold text-[36px] md:text-[52px] tracking-[-1.5px] text-[#f0ede8] leading-[1.05]">
-            A marketer who <span className="text-[#e8a030]">builds</span>. A builder who <span className="text-[#e8a030]">markets</span>.
+          <Reveal as="h2" className="font-['Anton'] text-[36px] md:text-[52px] tracking-tight text-[#17140e] leading-[1.05]">
+            A marketer who <span className="text-[#e8490f]">builds</span>. A builder who <span className="text-[#e8490f]">markets</span>.
           </Reveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
           {skills.map((s, i) => (
             <Reveal key={s.title} className="skill-card p-8" delay={i * 60}>
-              <div className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8a030] mb-4">{s.tag}</div>
-              <div className="font-['Syne'] font-bold text-xl text-[#f0ede8] mb-3.5">{s.title}</div>
-              <div className="font-['Inter'] text-sm text-[#6b6b6b] leading-relaxed">{s.body}</div>
-              <div className="w-10 h-px bg-[#e8a030] mt-7" />
+              <div className="font-['IBM_Plex_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8490f] mb-4">{s.tag}</div>
+              <div className="font-['Anton'] text-xl text-[#17140e] mb-3.5 tracking-tight">{s.title}</div>
+              <div className="font-['Inter'] text-sm text-[#8a8278] leading-relaxed">{s.body}</div>
+              <div className="w-10 h-px bg-[#e8490f] mt-7" />
             </Reveal>
           ))}
         </div>

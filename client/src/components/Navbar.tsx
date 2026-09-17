@@ -9,6 +9,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [active, setActive] = useState("hero");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const sections = document.querySelectorAll("[data-nav]");
@@ -26,16 +27,27 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 py-5 md:px-12 md:py-7">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 py-5 md:px-12 md:py-6 transition-all duration-300 ${
+        scrolled ? "bg-[#f4f1ea]/95 border-b border-[#d0cab8]" : ""
+      }`}
+      style={{ backdropFilter: scrolled ? "blur(8px)" : "none" }}
+    >
       <a
         href="#hero"
         onClick={(e) => { e.preventDefault(); scrollTo("#hero"); }}
-        className="font-['Syne'] font-extrabold text-xl text-[#e8a030] tracking-tight"
+        className="font-['Anton'] text-xl text-[#e8490f] tracking-tight"
       >
         HS
       </a>

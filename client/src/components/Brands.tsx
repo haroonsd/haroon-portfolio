@@ -17,7 +17,7 @@ function BrandCard({ brand }: { brand: { name: string; logo: string } }) {
   const [err, setErr] = useState(false);
 
   return (
-    <div className="w-[160px] h-[72px] border border-[#1e1e1e] bg-[#0d0d0d] flex items-center justify-center px-5 shrink-0">
+    <div className="w-[160px] h-[72px] border border-[#d0cab8] bg-[#ede9e0] flex items-center justify-center px-5 shrink-0">
       {!err ? (
         <img
           src={brand.logo}
@@ -26,7 +26,7 @@ function BrandCard({ brand }: { brand: { name: string; logo: string } }) {
           onError={() => setErr(true)}
         />
       ) : (
-        <span className="font-['Syne'] font-bold text-[13px] text-[#f0ede8] text-center leading-tight">{brand.name}</span>
+        <span className="font-['Anton'] text-[13px] text-[#17140e] text-center leading-tight">{brand.name}</span>
       )}
     </div>
   );
@@ -49,8 +49,8 @@ function BrandRow({ direction }: { direction: "left" | "right" }) {
 
 export default function Brands() {
   return (
-    <section id="brands" className="py-18 border-b border-[#1e1e1e]">
-      <Reveal label as="div" className="text-center font-['Syne_Mono'] text-[11px] tracking-[3px] text-[#6b6b6b] uppercase mb-12">
+    <section id="brands" className="py-18 border-b border-[#d0cab8]">
+      <Reveal label as="div" className="text-center font-['IBM_Plex_Mono'] text-[11px] tracking-[3px] text-[#8a8278] uppercase mb-12">
         BRANDS I'VE WORKED WITH
       </Reveal>
       <div className="ticker-outer overflow-hidden">

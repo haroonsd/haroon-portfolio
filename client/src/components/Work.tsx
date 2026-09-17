@@ -58,16 +58,19 @@ const miniProjects = [
 
 export default function Work() {
   return (
-    <section id="work" data-nav="work" className="py-24 md:py-[120px] border-b border-[#1e1e1e]">
+    <section id="work" data-nav="work" className="py-24 md:py-[120px] border-b border-[#d0cab8]">
       <div className="container max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="mb-20">
-          <Reveal label className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8a030] mb-6">
+          <Reveal label className="font-['IBM_Plex_Mono'] text-[10px] tracking-[2.5px] uppercase text-[#8a8278] mb-2">
+            // 01
+          </Reveal>
+          <Reveal label className="font-['IBM_Plex_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8490f] mb-6">
             SELECTED WORK
           </Reveal>
-          <Reveal as="h2" className="font-['Syne'] font-bold text-[36px] md:text-[52px] tracking-[-1.5px] text-[#f0ede8] leading-[1.05] mb-6">
-            Not just campaigns. <span className="text-[#e8a030]">Systems</span> that run.
+          <Reveal as="h2" className="font-['Anton'] text-[36px] md:text-[52px] tracking-tight text-[#17140e] leading-[1.05] mb-6">
+            Not just campaigns. <span className="text-[#e8490f]">Systems</span> that run.
           </Reveal>
-          <Reveal as="p" delay={100} className="font-['Inter'] text-base text-[#6b6b6b] leading-[1.7] max-w-[560px]">
+          <Reveal as="p" delay={100} className="font-['Inter'] text-base text-[#8a8278] leading-[1.7] max-w-[560px]">
             Every project here started with a problem worth solving — whether that was a booth that needed to feel like a brand, a team that needed visibility, or a retailer network that needed a single source of truth.
           </Reveal>
         </div>
@@ -77,19 +80,19 @@ export default function Work() {
             <div className="flex flex-col md:flex-row" style={{ minHeight: "420px" }}>
               <div className="w-full md:w-[52%] p-9 md:p-12 flex flex-col justify-between">
                 <div>
-                  <div className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8a030] mb-5">{p.tag}</div>
-                  <h3 className="font-['Syne'] font-bold text-[28px] md:text-[34px] tracking-[-1px] text-[#f0ede8] leading-[1.1] mb-5">{p.title}</h3>
-                  <p className="font-['Inter'] text-base text-[#6b6b6b] leading-[1.7] mb-7">{p.body}</p>
+                  <div className="font-['IBM_Plex_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8490f] mb-5">{p.tag}</div>
+                  <h3 className="font-['Anton'] text-[28px] md:text-[34px] tracking-tight text-[#17140e] leading-[1.1] mb-5">{p.title}</h3>
+                  <p className="font-['Inter'] text-base text-[#8a8278] leading-[1.7] mb-7">{p.body}</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {p.chips.map((chip) => (
-                    <span key={chip} className="font-['Syne_Mono'] text-[11px] tracking-[1.5px] uppercase text-[#6b6b6b] border border-[#2a2a2a] px-3 py-1.5">
+                    <span key={chip} className="font-['IBM_Plex_Mono'] text-[11px] tracking-[1.5px] uppercase text-[#8a8278] border border-[#d0cab8] px-3 py-1.5">
                       {chip}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="w-full md:w-[48%] min-h-[280px] border-t md:border-t-0 md:border-l border-[#1e1e1e] overflow-hidden">
+              <div className="w-full md:w-[48%] min-h-[280px] border-t md:border-t-0 md:border-l border-[#d0cab8] overflow-hidden">
                 <ProjectSlider images={p.images} />
               </div>
             </div>
@@ -97,16 +100,16 @@ export default function Work() {
         ))}
 
         {/* Mini projects */}
-        <div className="border-t border-[#1e1e1e] mt-20 pt-14">
-          <Reveal label className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#6b6b6b] mb-8">
+        <div className="border-t border-[#d0cab8] mt-20 pt-14">
+          <Reveal label className="font-['IBM_Plex_Mono'] text-[11px] tracking-[2px] uppercase text-[#8a8278] mb-8">
             MORE WORK
           </Reveal>
           <div className="flex flex-col md:flex-row gap-0.5">
             {miniProjects.map((m, i) => (
               <Reveal key={m.title} className="mini-card flex-1 p-9" delay={i * 80}>
-                <div className="font-['Syne_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8a030] mb-4">{m.tag}</div>
-                <h4 className="font-['Syne'] font-bold text-[22px] text-[#f0ede8] mb-3.5 tracking-[-0.5px]">{m.title}</h4>
-                <p className="font-['Inter'] text-[15px] text-[#6b6b6b] leading-[1.65]">{m.body}</p>
+                <div className="font-['IBM_Plex_Mono'] text-[11px] tracking-[2px] uppercase text-[#e8490f] mb-4">{m.tag}</div>
+                <h4 className="font-['Anton'] text-[22px] text-[#17140e] mb-3.5 tracking-tight">{m.title}</h4>
+                <p className="font-['Inter'] text-[15px] text-[#8a8278] leading-[1.65]">{m.body}</p>
               </Reveal>
             ))}
           </div>
