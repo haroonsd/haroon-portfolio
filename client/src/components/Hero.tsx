@@ -23,24 +23,24 @@ function ResumeViewer({ onClose }: { onClose: () => void }) {
   }, [onClose]);
 
   return createPortal(
-    <div className="fixed inset-0 bg-[#17140e]/95 z-[100] flex flex-col">
-      <div className="flex items-center justify-between px-6 md:px-12 py-4 border-b border-[#2a2520] shrink-0">
+    <div className="fixed inset-0 bg-[#0a0a0a]/96 z-[100] flex flex-col">
+      <div className="flex items-center justify-between px-6 md:px-12 py-4 border-b border-[#1e1e1e] shrink-0">
         <div className="flex items-center gap-3">
-          <span className="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-[2.5px] text-[#8a8278]">Haroon Siddiqui</span>
-          <span className="text-[#e8490f]">·</span>
-          <span className="font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-[2.5px] text-[#8a8278]">Resume 2026</span>
+          <span className="font-['Syne_Mono'] text-[10px] uppercase tracking-[2.5px] text-[#6b6b6b]">Haroon Siddiqui</span>
+          <span className="text-[#e8a030]">·</span>
+          <span className="font-['Syne_Mono'] text-[10px] uppercase tracking-[2.5px] text-[#6b6b6b]">Resume 2026</span>
         </div>
         <div className="flex items-center gap-6">
           <a
             href="/resume.pdf"
             download="Haroon-Siddiqui-Resume-2026.pdf"
-            className="font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#e8490f] hover:opacity-70 transition-opacity"
+            className="font-['Syne_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#e8a030] hover:opacity-70 transition-opacity"
           >
             Download ↓
           </a>
           <button
             onClick={onClose}
-            className="font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#8a8278] hover:text-[#f4f1ea] transition-colors"
+            className="font-['Syne_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#6b6b6b] hover:text-[#f0ede8] transition-colors"
             aria-label="Close resume viewer"
           >
             Close ×
@@ -48,7 +48,7 @@ function ResumeViewer({ onClose }: { onClose: () => void }) {
         </div>
       </div>
 
-      <div className="flex-1 overflow-hidden bg-[#0d0a07]">
+      <div className="flex-1 overflow-hidden bg-[#111111]">
         <iframe
           src="/resume.pdf"
           title="Haroon Siddiqui Resume 2026"
@@ -56,20 +56,21 @@ function ResumeViewer({ onClose }: { onClose: () => void }) {
         />
       </div>
 
-      <div className="md:hidden flex items-center justify-center gap-4 py-4 border-t border-[#2a2520] shrink-0 bg-[#17140e]">
+      {/* Mobile fallback — iframes are unreliable on mobile */}
+      <div className="md:hidden flex items-center justify-center gap-4 py-4 border-t border-[#1e1e1e] shrink-0 bg-[#0a0a0a]">
         <a
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#f4f1ea]"
+          className="font-['Syne_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#f0ede8]"
         >
           Open in browser ↗
         </a>
-        <span className="text-[#e8490f]">·</span>
+        <span className="text-[#e8a030]">·</span>
         <a
           href="/resume.pdf"
           download="Haroon-Siddiqui-Resume-2026.pdf"
-          className="font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#e8490f]"
+          className="font-['Syne_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#e8a030]"
         >
           Download ↓
         </a>
@@ -110,40 +111,40 @@ export default function Hero() {
       <section
         id="hero"
         data-nav="hero"
-        className="relative min-h-screen flex items-center pt-20 border-b border-[#d0cab8]"
+        className="relative min-h-screen flex items-center pt-20 border-b border-[#1e1e1e]"
       >
         <div className="container max-w-[1400px] mx-auto px-6 md:px-12 py-20 w-full">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 w-full">
             {/* Left */}
             <div className="md:flex-[0_0_58%] md:max-w-[58%] w-full">
-              <Reveal label className="font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[2px] text-[#8a8278] mb-11 flex items-center gap-2.5">
-                <span className="text-[#e8490f] text-[13px] leading-none">●</span>
+              <Reveal label className="font-['Syne_Mono'] text-[11px] uppercase tracking-[2px] text-[#6b6b6b] mb-11 flex items-center gap-2.5">
+                <span className="text-[#e8a030] text-[13px] leading-none">●</span>
                 AVAILABLE FOR OPPORTUNITIES · TORONTO, ON
               </Reveal>
 
               <div
                 className={`mb-8 leading-[0.88] transition-opacity duration-500 ${nameVisible ? "opacity-100" : "opacity-0"}`}
               >
-                <div className="font-['Anton'] uppercase text-[#17140e] tracking-tight text-[52px] md:text-[clamp(52px,6.5vw,96px)]">
+                <div className="font-['Syne'] font-extrabold uppercase text-[#f0ede8] tracking-[-3px] text-[52px] md:text-[clamp(52px,6.5vw,96px)]">
                   HAROON
                 </div>
-                <div className="font-['Anton'] uppercase text-[#17140e] tracking-tight text-[52px] md:text-[clamp(52px,6.5vw,96px)]">
-                  SIDDIQU<span className="text-[#e8490f]">I</span>
+                <div className="font-['Syne'] font-extrabold uppercase text-[#f0ede8] tracking-[-3px] text-[52px] md:text-[clamp(52px,6.5vw,96px)]">
+                  SIDDIQU<span className="text-[#e8a030]">I</span>
                 </div>
               </div>
 
-              <div className="font-['Inter'] text-xl text-[#17140e] mb-14 min-h-[34px] leading-relaxed">
+              <div className="font-['Inter'] text-xl text-[#f0ede8] mb-14 min-h-[34px] leading-relaxed">
                 <span>{typed}</span>
-                <span className={`ml-px text-[#e8490f] ${cursorOn ? "tw-cursor" : "opacity-0"}`}>|</span>
+                <span className={`ml-px text-[#e8a030] ${cursorOn ? "tw-cursor" : "opacity-0"}`}>|</span>
               </div>
 
               <Reveal className="flex items-center mb-14">
                 {stats.map((s, i) => (
                   <div key={s.label} className="flex items-center">
-                    {i > 0 && <div className="w-px h-9 bg-[#e8490f]/30 mx-8 shrink-0" />}
+                    {i > 0 && <div className="w-px h-9 bg-[#e8a030]/35 mx-8 shrink-0" />}
                     <div>
-                      <div className="font-['Anton'] text-2xl text-[#e8490f]">{s.value}</div>
-                      <div className="font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[2px] text-[#8a8278] mt-1.5">{s.label}</div>
+                      <div className="font-['Syne'] font-bold text-2xl text-[#e8a030]">{s.value}</div>
+                      <div className="font-['Syne_Mono'] text-[11px] uppercase tracking-[2px] text-[#6b6b6b] mt-1.5">{s.label}</div>
                     </div>
                   </div>
                 ))}
@@ -153,13 +154,13 @@ export default function Hero() {
                 <a
                   href="#work"
                   onClick={(e) => { e.preventDefault(); document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" }); }}
-                  className="hero-link font-['Inter'] text-base text-[#17140e]"
+                  className="hero-link font-['Inter'] text-base text-[#f0ede8]"
                 >
                   View My Work ↓
                 </a>
                 <button
                   onClick={() => setResumeOpen(true)}
-                  className="hero-link font-['Inter'] text-base text-[#17140e] bg-transparent border-0 p-0 cursor-pointer"
+                  className="hero-link font-['Inter'] text-base text-[#f0ede8] bg-transparent border-0 p-0 cursor-pointer"
                 >
                   View Resume
                 </button>
@@ -168,8 +169,8 @@ export default function Hero() {
 
             {/* Right: video */}
             <div className="flex-1 relative w-full">
-              <div className="absolute -inset-20 pointer-events-none z-0" style={{ background: "radial-gradient(ellipse at center, rgba(232,73,15,0.06) 0%, transparent 65%)" }} />
-              <div className="relative z-10 w-full aspect-[4/5] bg-[#ede9e0] border border-[#d0cab8] overflow-hidden">
+              <div className="absolute -inset-20 pointer-events-none z-0" style={{ background: "radial-gradient(ellipse at center, rgba(232,160,48,0.055) 0%, transparent 65%)" }} />
+              <div className="relative z-10 w-full aspect-[4/5] bg-[#111111] border border-[#1e1e1e] overflow-hidden">
                 <video
                   src={HERO_VIDEO}
                   autoPlay
@@ -184,8 +185,8 @@ export default function Hero() {
         </div>
 
         <div className="absolute bottom-11 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-          <span className="font-['IBM_Plex_Mono'] text-[10px] tracking-[3px] text-[#8a8278] uppercase">scroll</span>
-          <div className="w-px h-10 bg-[#8a8278]" style={{ transformOrigin: "top center", animation: "lineGrow 2.2s ease-in-out infinite" }} />
+          <span className="font-['Syne_Mono'] text-[10px] tracking-[3px] text-[#6b6b6b] uppercase">scroll</span>
+          <div className="w-px h-10 bg-[#6b6b6b]" style={{ transformOrigin: "top center", animation: "lineGrow 2.2s ease-in-out infinite" }} />
         </div>
       </section>
 
