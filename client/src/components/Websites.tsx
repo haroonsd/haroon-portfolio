@@ -63,7 +63,7 @@ export default function Websites() {
                   <img
                     src={site.screenshot}
                     alt={site.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.04]"
                   />
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-[#0a0a0a]/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

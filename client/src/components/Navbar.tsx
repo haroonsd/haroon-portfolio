@@ -9,6 +9,13 @@ const navLinks = [
 
 export default function Navbar() {
   const [active, setActive] = useState("hero");
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("[data-nav]");
@@ -31,7 +38,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 py-5 md:px-12 md:py-7">
+    <nav className={`fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 py-5 md:px-12 md:py-7 transition-colors duration-300 ${scrolled ? "bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-[#1e1e1e]" : ""}`}>
       <a
         href="#hero"
         onClick={(e) => { e.preventDefault(); scrollTo("#hero"); }}
