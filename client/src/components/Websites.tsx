@@ -2,6 +2,12 @@ import Reveal from "@/components/Reveal";
 
 const sites = [
   {
+    label: "OJIGA · CONNECTIONS NETWORK",
+    name: "ojiga-connections-network.lovable.app",
+    url: "https://ojiga-connections-network.lovable.app",
+    screenshot: "https://res.cloudinary.com/dchbuwhfz/image/upload/v1790492460/Screenshot_1_trgqhi.png",
+  },
+  {
     label: "ROGERS · WIRELESS DNA",
     name: "connectwithrogers.ca",
     url: "https://connectwithrogers.ca",
@@ -18,6 +24,12 @@ const sites = [
     name: "thefootballschool.ca",
     url: "https://thefootballschool.ca",
     screenshot: "https://res.cloudinary.com/dchbuwhfz/image/upload/v1783903848/TFS_ss_r8qa5d.png",
+  },
+  {
+    label: "GOGO AUTO REPAIR",
+    name: "gogo-auto-repair.smh-siddiqui786.workers.dev",
+    url: "https://gogo-auto-repair.smh-siddiqui786.workers.dev/",
+    screenshot: "https://res.cloudinary.com/dchbuwhfz/image/upload/v1790492562/Screenshot_2_w4pftr.png",
   },
 ];
 

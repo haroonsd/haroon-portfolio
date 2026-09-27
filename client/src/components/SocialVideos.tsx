@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Reveal from "@/components/Reveal";
 
 const VIDEOS = [
+  { src: "https://res.cloudinary.com/dchbuwhfz/video/upload/v1790492214/what_what_cwmb4m.mp4", label: "What What" },
   { src: "https://res.cloudinary.com/dchbuwhfz/video/upload/v1783309923/Derek_here_Get_ready_for_Oktoberfest_this_Friday_at_Tumbleweed_Lounge_We_ve_got_Paulan_gkcati.mp4", label: "Oktoberfest @ Tumbleweed" },
   { src: "https://res.cloudinary.com/dchbuwhfz/video/upload/v1783309923/Get_Your_Senorita_to_Try_This_Margarita_Sip_into_summer_with_our_Blue_Margarita_at_Tumblewe_lcluze.mp4", label: "Blue Margarita Reel" },
   { src: "https://res.cloudinary.com/dchbuwhfz/video/upload/v1783309923/Boom_Boom_Bazooka_by_biblicallyaccuratekira__Ready_for_a_shot_that_packs_a_punch_Kyra_s_servi_iob1qm.mp4", label: "Boom Boom Bazooka" },
