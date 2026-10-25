@@ -47,12 +47,12 @@ const miniProjects = [
   {
     tag: "CRM & EMAIL · CORPORATE",
     title: "Email Campaigns & CRM",
-    body: "300 corporate accounts managed across Dynamics 365, Klaviyo, and Mailchimp. Automated flows, segmented campaigns, HTML templates built in-house.",
+    body: "300 corporate accounts managed across Dynamics 365, Klaviyo, and Mailchimp. HTML templates built in-house and regular campaign sends.",
   },
   {
     tag: "ORGANIC SOCIAL · ZERO BUDGET",
     title: "Organic Social Growth",
-    body: "0 to 30K reach with no ad spend. Self-shot content, consistent scheduling, and copy that didn't sound like it was written by a committee.",
+    body: "0 to 30K reach with no ad spend on a 2025 test pilot. Self-shot content, consistent scheduling, and copy that didn't sound like it was written by a committee.",
   },
 ];
 

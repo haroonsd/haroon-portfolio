@@ -9,12 +9,12 @@ const skills = [
   {
     tag: "CRM & EMAIL",
     title: "The inbox is not dead",
-    body: "Microsoft Dynamics 365, Klaviyo, Mailchimp, HTML email design, lead flows",
+    body: "Microsoft Dynamics 365, Klaviyo, Mailchimp, HTML email design, regular campaign sends",
   },
   {
     tag: "AI & AUTOMATION",
     title: "If it's repetitive, it's automated",
-    body: "n8n, Make.com, Zapier, Manychat, Vapi.ai, Claude, Lovable, Cursor",
+    body: "n8n, Zapier, GoHighLevel, Vapi.ai, Claude, Lovable, Cursor",
   },
   {
     tag: "BUILDING & VIBE CODING",

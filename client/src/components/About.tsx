@@ -31,7 +31,7 @@ export default function About() {
                 I'm Haroon — a marketing operations professional who ended up building AI tools because nobody else was going to. Over the past 5 years across agency life in India and retail marketing in Toronto, I've learned that the best campaigns run on great systems, and the best systems are built by people who understand the campaign.
               </p>
               <p className="font-['Inter'] text-base text-[#f0ede8] leading-[1.8] mb-6">
-                At Wireless DNA, I run marketing for Rogers and Chatr across 50+ retail stores, 30 sub-dealer partners, and everything in between. I've stood in event venues at 7am setting up booths and also stayed up building internal tools at midnight. Both feel the same to me — a problem worth fixing.
+                At Wireless DNA, I run marketing for Rogers and Chatr across 60+ retail stores, 30 sub-dealer partners, and everything in between. I've stood in event venues at 7am setting up booths and also stayed up building internal tools at midnight. Both feel the same to me — a problem worth fixing.
               </p>
               <p className="font-['Inter'] text-base text-[#f0ede8] leading-[1.8] mb-12">
                 I'm at my best inside a startup or a fast-moving team where the job description is a rough starting point, not a ceiling.

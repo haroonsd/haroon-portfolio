@@ -5,9 +5,7 @@ const categories = [
     label: "AUTOMATION & AI",
     tools: [
       { name: "n8n", logo: "https://cdn.simpleicons.org/n8n/e8a030" },
-      { name: "Make", logo: "https://cdn.simpleicons.org/make/6d00cc" },
       { name: "Zapier", logo: "https://cdn.simpleicons.org/zapier/ff4a00" },
-      { name: "Manychat", logo: "https://logo.clearbit.com/manychat.com" },
       { name: "Claude AI", logo: "https://cdn.simpleicons.org/anthropic/ffffff" },
       { name: "Vapi", logo: "https://logo.clearbit.com/vapi.ai" },
     ],
@@ -29,7 +27,6 @@ const categories = [
       { name: "Mailchimp", logo: "https://cdn.simpleicons.org/mailchimp/ffe01b" },
       { name: "Klaviyo", logo: "https://cdn.simpleicons.org/klaviyo/ffffff" },
       { name: "Dynamics 365", logo: "https://cdn.simpleicons.org/dynamics365/0078d4" },
-      { name: "HubSpot", logo: "https://cdn.simpleicons.org/hubspot/ff7a59" },
     ],
   },
   {

@@ -7,7 +7,7 @@ const TAGLINE = "I build ai-powered marketing systems to automate business growt
 
 const stats = [
   { value: "5+", label: "Years" },
-  { value: "50+", label: "Retail Locations" },
+  { value: "60+", label: "Retail Locations" },
   { value: "4", label: "Sales Channels" },
 ];
 

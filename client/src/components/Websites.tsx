@@ -1,8 +1,8 @@
 import Reveal from "@/components/Reveal";
 
-const sites = [
+const sites: { label: string; name: string; url: string; screenshot: string; stat?: string }[] = [
   {
-    label: "OJIGA · CONNECTIONS NETWORK",
+    label: "OJIGA · CONCEPT DEMO",
     name: "ojiga-connections-network.lovable.app",
     url: "https://ojiga-connections-network.lovable.app",
     screenshot: "https://res.cloudinary.com/dchbuwhfz/image/upload/v1790492460/Screenshot_1_trgqhi.png",
@@ -12,6 +12,7 @@ const sites = [
     name: "connectwithrogers.ca",
     url: "https://connectwithrogers.ca",
     screenshot: "https://res.cloudinary.com/dchbuwhfz/image/upload/v1783903848/cwr_fulvxa.png",
+    stat: "8,300+ visitors · 13,000+ pageviews in the last 31 days",
   },
   {
     label: "CHATR · WIRELESS DNA",
@@ -21,8 +22,8 @@ const sites = [
   },
   {
     label: "SPORTS ACADEMY",
-    name: "thefootballschool.ca",
-    url: "https://thefootballschool.ca",
+    name: "thefootballschool.in",
+    url: "https://thefootballschool.in",
     screenshot: "https://res.cloudinary.com/dchbuwhfz/image/upload/v1783903848/TFS_ss_r8qa5d.png",
   },
   {
@@ -78,6 +79,9 @@ export default function Websites() {
                   <div>
                     <div className="font-['Syne_Mono'] text-[9px] uppercase tracking-[2px] text-[#6b6b6b] mb-1">{site.label}</div>
                     <div className="font-['Inter'] text-[13px] text-[#f0ede8]">{site.name}</div>
+                    {site.stat && (
+                      <div className="font-['Inter'] text-[12px] text-[#e8a030] mt-1">{site.stat}</div>
+                    )}
                   </div>
                   <span className="font-['Syne_Mono'] text-[11px] uppercase tracking-[1.5px] text-[#e8a030] group-hover:opacity-70 transition-opacity shrink-0 ml-4">
                     ↗
