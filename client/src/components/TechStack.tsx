@@ -27,6 +27,7 @@ const categories = [
       { name: "Mailchimp", logo: "https://cdn.simpleicons.org/mailchimp/ffe01b" },
       { name: "Klaviyo", logo: "https://cdn.simpleicons.org/klaviyo/ffffff" },
       { name: "Dynamics 365", logo: "https://cdn.simpleicons.org/dynamics365/0078d4" },
+      { name: "GoHighLevel", logo: "https://www.gohighlevel.com/favicon.ico" },
     ],
   },
   {
